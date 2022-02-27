@@ -30,16 +30,12 @@ if (isset($updateUser)) {
         </div>
         <div class="card-body">
 
-    <?php
+  <?php
+  
     $getUinfo = $users->getUserInfoById($userid);
     if ($getUinfo) {
 
-
-
-
-
-
-     ?>
+  ?>
 
 
           <div style="width:600px; margin:0px auto">

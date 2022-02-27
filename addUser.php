@@ -59,8 +59,6 @@ if (isset($userAdd)) {
                 <div class="form-group">
                   <button type="submit" name="addUser" class="btn btn-success">Register</button>
                 </div>
-
-
             </form>
           </div>
 

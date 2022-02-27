@@ -47,14 +47,13 @@ if (isset($activeId)) {
         <div class="card-header">
           <h3><i class="fas fa-users mr-2"></i>User list <span class="float-right">Welcome! <strong>
             <span class="badge badge-lg badge-secondary text-white">
-<?php
-$username = Session::get('username');
-if (isset($username)) {
-  echo $username;
-}
- ?></span>
-
-          </strong></span></h3>
+      <?php
+      $username = Session::get('username');
+      if (isset($username)) {
+        echo $username;
+      }
+      ?>
+      </span></strong></span></h3>
         </div>
         <div class="card-body pr-2 pl-2">
 
@@ -128,7 +127,7 @@ if (isset($username)) {
                        <?php if (Session::get("id") == $value->id) {
                          echo "disabled";
                        } ?>
-                                btn-sm " href="?deactive=<?php echo $value->id;?>">Disable</a>
+                                btn-sm " href="?deactive=<?php echo $value->id;?>">Deactive</a>
                              <?php } elseif($value->isActive == '1'){?>
                                <a onclick="return confirm('Are you sure To Active ?')" class="btn btn-secondary
                        <?php if (Session::get("id") == $value->id) {
@@ -136,8 +135,6 @@ if (isset($username)) {
                        } ?>
                                 btn-sm " href="?active=<?php echo $value->id;?>">Active</a>
                              <?php } ?>
-
-
 
 
                         <?php  }elseif(Session::get("id") == $value->id  && Session::get("roleid") == '2'){ ?>
